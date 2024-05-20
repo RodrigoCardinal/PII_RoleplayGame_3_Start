@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
-    public abstract class AVillains : ACharacter
+    public abstract class AVillan : ACharacter
     {
         public int victoryPoints;
 

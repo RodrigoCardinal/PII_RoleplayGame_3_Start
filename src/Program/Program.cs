@@ -86,42 +86,44 @@ namespace Program
 
              //Creo héroe.
             
-
             AHeroes Link = new GoodArcher("Link");
-
-            AHeroes Gandalf = new Wizard("Gandalf");
+            AHeroes Gandalf = new GoodWizard("Gandalf");
+            AHeroes Arturo = new GoodKnight("Arturo");
+            AHeroes Ramon = new GoodDwarf ("Ramon");
 
             //Creo villano.
-            AVillains Antonio = new EvilArcher("Antonio");
-            AVillains Mauricio = new EvilWizard("Mauricio");
-
+            AVillan Antonio = new EvilArcher("Antonio");
+            AVillan Mauricio = new EvilWizard("Mauricio");
+            AVillan Jose = new EvilKnight("Jose");
+            AVillan Roberto = new EvilDwarf ("Roberto");
             
             //Conocer porcentaje de vide del personaje
             Console.WriteLine($"Link tiene ❤️ {Link.Health}");
             Console.WriteLine($"Gandalf tiene ❤️ {Gandalf.Health}");
+            Console.WriteLine($"Arturo tiene ❤️ {Arturo.Health}");
+            Console.WriteLine($"Ramon tiene ❤️ {Ramon.Health}");
 
 
 
             //Creo batalla.
             Battle firstBattle = new Battle("First Battle.");
+            Battle secondBattle = new Battle("Second Battle.");
+
 
             //Añado quiénes pelearán.
             firstBattle.AddHeroes(Link);
-            firstBattle.AddVillains(Mauricio);
+            firstBattle.AddVillan(Mauricio);
 
-            firstBattle.AddHeroes(Gandalf);
-            firstBattle.AddVillains(Antonio);
+            secondBattle.AddHeroes(Gandalf);
+            secondBattle.AddVillan(Antonio);
+
+
 
 
             //Se pelean.
             firstBattle.CreateBattle();
-            Console.WriteLine($"Link attacks Antonio con {Link.AttackValue}");
-
-
-
-            Console.WriteLine($"Antonio tiene ❤️ {Antonio.Health}");
-
-            
+            Console.WriteLine($"Link attacks Mauricio con ⚔️{Link.AttackValue}");
+            Console.WriteLine($"Mauricio tiene ❤️ {Mauricio.Health}");
 
 
         }

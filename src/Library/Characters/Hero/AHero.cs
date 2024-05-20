@@ -16,7 +16,7 @@ namespace RoleplayGame
             }
         }
 
-        public void KillTheEnemy(AVillains enemy)
+        public void KillTheEnemy(AVillan enemy)
         {
             if (enemy.Health == 0)
             {

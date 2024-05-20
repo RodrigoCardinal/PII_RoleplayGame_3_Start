@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
-    public class EvilWizard : AVillains , IMagicCharacter
+    public class EvilWizard : AVillan , IMagicCharacter
     {   
         private List<IMagicalItem> magicalItem = new List<IMagicalItem>();
         public EvilWizard(string name)

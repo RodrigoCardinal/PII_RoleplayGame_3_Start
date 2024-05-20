@@ -2,7 +2,7 @@
 
 namespace RoleplayGame
 {
-    public class EvilArcher : AVillains
+    public class EvilArcher : AVillan
     {
         public EvilArcher(string name)
         {

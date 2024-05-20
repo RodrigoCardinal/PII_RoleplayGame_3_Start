@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Wizard: AHeroes, IMagicCharacter
+    public class GoodWizard: AHeroes, IMagicCharacter
     {
        private List<IMagicalItem> magicalItem = new List<IMagicalItem>();
-       public Wizard(string name)
+       public GoodWizard(string name)
         {
             this.Name = name;
             this.health = 100;

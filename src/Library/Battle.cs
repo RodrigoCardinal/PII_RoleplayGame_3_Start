@@ -6,7 +6,7 @@ namespace RoleplayGame
     {
         public string BattleName {get;set;}
         public List<AHeroes> Heroes = new List<AHeroes>();
-        public List<AVillains> Villains = new List<AVillains>();
+        public List<AVillan> Villan = new List<AVillan>();
         public Battle (string battleName)
         {
             this.BattleName = battleName;
@@ -15,16 +15,16 @@ namespace RoleplayGame
         {
             Heroes.Add(pj);
         }
-        public void AddVillains(AVillains pj)
+        public void AddVillan(AVillan pj)
         {
-            Villains.Add(pj);
+            Villan.Add(pj);
         }
         public void CreateBattle()
         {
             int countH = 0;
             int countV = 0;
             var listH = Heroes;
-            var listV = Villains;
+            var listV = Villan;
             while (listH.Count >= 1 && listV.Count >= 1)
             {
                 listH[countH].ReceiveAttack(listV[countV].AttackValue);
@@ -74,7 +74,7 @@ namespace RoleplayGame
             }
             if (listV.Count >= 1)
             {
-                foreach (AVillains V in listV)
+                foreach (AVillan V in listV)
                 {
                     Console.WriteLine(V.Name);
                 }
